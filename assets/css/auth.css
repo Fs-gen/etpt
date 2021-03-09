@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    font-family: 'poppins';
+}
+
+body {
+    background-color: #02275d;
+}
+
+.btn-primary {
+    background-color: #02275d;
+}
+
+a {
+    color: #02275d;
+}
+
+.judul {
+    font-weight: 700;
+    font-size: 30px;
+    color: #02275d;
+}
+
+.subjudul {
+    font-weight: 300;
+}
+
+label {
+    font-weight: 600;
+}
+
+.g-recaptcha {
+    transform: scale(0.88);
+    -webkit-transform: scale(0.88);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+}
