@@ -4,6 +4,17 @@
         echo $this->session->flashdata('notif');
     } ?>
 
+    <?php
+    // cek permintaan swafoto
+    $cek = $this->db->get_where('poro', ['input_by' => $this->session->userdata('id')])->row_array();
+    if ($cek && $cek['swafoto'] == 'diminta') : ?>
+        <div class="alert alert-info" role="alert">
+            <h4 class="alert-heading font-weight-bolder">Swafoto diperlukan!</h4>
+            <p>Data permintaan lupa EFIN anda tidak sesuai dengan data di DJP Online, maka dari itu kami meminta anda untuk melakukan Swafoto.</p>
+            <hr>
+            <p class="mb-0"><a href="<?= base_url('User/swafoto') ?>" class="btn btn-info">Lakukan Swafoto</a>.</p>
+        </div>
+    <?php endif; ?>
     <div class="row my-4">
         <div class="col-md-6 mb-3">
             <div class="card alert-primary">

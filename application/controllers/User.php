@@ -29,7 +29,7 @@ class User extends CI_Controller
     {
 
         if ($this->db->get_where('formulir', ['input_by' => $this->session->userdata('id')])->num_rows() >= 1) {
-            $this->session->set_flashdata('notif', '<div class="alert alert-info alert-dismissible fade show" role="alert">Formulir sudah terkirim, EFIN akan dikirim ke email anda! <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            $this->session->set_flashdata('notif', '<div class="alert alert-info alert-dismissible fade show" role="alert"><b>Formulir sudah terkirim</b>, Petugas akan mengecek formulir kemudian EFIN akan dikirim ke email anda! <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button></div>');
             redirect('user');
@@ -72,7 +72,7 @@ class User extends CI_Controller
             $kewarganegaraan = htmlspecialchars($this->input->post('kewarganegaraan', true));
 
             // kewarganegaraan
-            if ($kewarganegaraan == 'ASING') {
+            if ($kewarganegaraan == 'Asing') {
                 $negara = htmlspecialchars($this->input->post('negara', true));
                 $paspor = htmlspecialchars($this->input->post('paspor', true));
                 $nokitas_kitap = htmlspecialchars($this->input->post('nokitas_kitap', true));
@@ -121,7 +121,7 @@ class User extends CI_Controller
                 ];
 
                 if ($this->db->insert('formulir', $insert)) {
-                    $this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible fade show" role="alert">Formulir sudah terkirim, EFIN akan dikirim ke email anda! <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    $this->session->set_flashdata('notif', '<div class="alert alert-info alert-dismissible fade show" role="alert"><b>Formulir sudah terkirim</b>, Petugas akan mengecek formulir kemudian EFIN akan dikirim ke email anda! <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button></div>');
                     redirect('User');
@@ -188,9 +188,9 @@ class User extends CI_Controller
     public function poro()
     {
         if ($this->db->get_where('poro', ['input_by' => $this->session->userdata('id')])->num_rows() >= 1) {
-            $this->session->set_flashdata('notif', '<div class="alert alert-info alert-dismissible fade show" role="alert">Formulir sudah terkirim, EFIN akan dikirim ke email anda! <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button></div>');
+            $this->session->set_flashdata('notif', '<div class="alert alert-info alert-dismissible fade show" role="alert"><b>Formulir sudah terkirim</b>, Petugas akan mengecek formulir kemudian EFIN akan dikirim ke email anda! <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button></div>');
             redirect('user');
         }
 
@@ -254,7 +254,7 @@ class User extends CI_Controller
                 ];
 
                 if ($this->db->insert('poro', $insert)) {
-                    $this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible fade show" role="alert">Formulir sudah terkirim, EFIN akan dikirim ke email anda! <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    $this->session->set_flashdata('notif', '<div class="alert alert-info alert-dismissible fade show" role="alert"><b>Formulir sudah terkirim</b>, Petugas akan mengecek formulir kemudian EFIN akan dikirim ke email anda! <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button></div>');
                     redirect('User');
@@ -282,7 +282,7 @@ class User extends CI_Controller
                 ];
 
                 if ($this->db->insert('poro', $insert)) {
-                    $this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible fade show" role="alert">Formulir sudah terkirim, EFIN akan dikirim ke email anda!<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    $this->session->set_flashdata('notif', '<div class="alert alert-info alert-dismissible fade show" role="alert"><b>Formulir sudah terkirim</b>, Petugas akan mengecek formulir kemudian EFIN akan dikirim ke email anda! <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button></div>');
                     redirect('User');

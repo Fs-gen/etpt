@@ -39,12 +39,14 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Permintaan Aktivasi EFIN</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $total_aktivasi ?></div>
+
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-lock-open fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
+                                <small class="text-right mr-4"><a href="#aktivasi">Lihat Semua</a></small>
                             </div>
                         </div>
 
@@ -62,6 +64,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <small class="text-right mr-4"><a href="#lupa_efin">Lihat Semua</a></small>
                             </div>
                         </div>
 
@@ -158,7 +161,7 @@
                                                     <td><?= $this->npwpformatter->npwp_format($lupa['npwp']); ?></td>
                                                     <td><?= $lupa['email']; ?></td>
                                                     <td><?= $lupa['jenis_wajib_pajak']; ?></td>
-                                                    <td class="text-center"><a href="<?= base_url('Home/lihat_formulir/') . $lupa['id'] ?>"><i class="fas fa-eye"></i></a></td>
+                                                    <td class="text-center"><a href="<?= base_url('Home/lihat_poro/') . $lupa['id'] ?>"><i class="fas fa-eye"></i></a></td>
                                                 </tr>
                                             <?php endforeach; ?>
                                         <?php endif; ?>
