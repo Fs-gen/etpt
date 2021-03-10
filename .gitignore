@@ -29,9 +29,4 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 *.sublime-project
 /tests/tests/
 /tests/results/
-16. Formulir Permohonan EFIN.xlsx
-efin.sql
-from.html
-login.html
-register.html
-ui.html
+/file_gaguna/*
